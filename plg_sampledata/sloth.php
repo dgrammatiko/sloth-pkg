@@ -256,8 +256,8 @@ class PlgSampledataSloth extends \Joomla\CMS\Plugin\CMSPlugin {
 
         // Set the correct cat id/component id
         if ($item->link) {
-          // $queryString = parse_url($item->link, PHP_URL_QUERY);
-          // parse_str($queryString, $queryArr);
+          $queryString = parse_url($item->link, PHP_URL_QUERY);
+          parse_str($queryString, $queryArr);
           preg_match('/option\=(.*?)&/', $item->link, $matches);
 
           if (count($matches)) {
