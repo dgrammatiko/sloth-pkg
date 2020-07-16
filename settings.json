@@ -1,0 +1,6 @@
+{
+  "options": {
+    "destinationPath": "tmpl_sloth/sloth",
+    "template": "tmpl_sloth/sloth"
+  }
+}

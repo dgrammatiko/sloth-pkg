@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="sampledata" method="upgrade">
+  <name>Sloth Sample Data</name>
+  <version>0.0.1</version>
+  <author>D. Grammatikogiannis</author>
+  <creationDate>2020</creationDate>
+  <copyright>Copyright (C) 2020 D. Grammatikogiannis. All rights reserved.</copyright>
+  <description>Provides the sample data for the Sloth template. Can be installed using the sample data module.</description>
+  <files>
+    <folder>zips</folder>
+    <filename>data.json</filename>
+    <filename plugin="sloth">sloth.php</filename>
+  </files>
+</extension>
