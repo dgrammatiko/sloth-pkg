@@ -32,3 +32,8 @@ jobs:
     
     - name: GH Pages deploy
       uses: Cecilapp/GitHub-Pages-deploy@2.0.1
+      env:
+        EMAIL: d.grammatiko@gmail.com
+        GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BUILD_DIR: docs
+        JEKYLL_SITE: NO
