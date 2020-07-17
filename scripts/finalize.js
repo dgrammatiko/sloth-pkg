@@ -17,4 +17,11 @@ const { version } = require("../package.json");
   zip.writeZip(`docs/packages/tmpl_sloth-v${version}.zip`);
 
   await unlink("./pkg_sloth.xml");
+
+  let html = await readFile("./docs/index-src.html", {
+    encoding: "utf8",
+  });
+  html = html.replace(/{{version}}/g, version);
+
+  await writeFile("./docs/index.html", html, { encoding: "utf8" });
 })();
