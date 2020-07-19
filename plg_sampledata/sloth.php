@@ -46,7 +46,7 @@ class PlgSampledataSloth extends \Joomla\CMS\Plugin\CMSPlugin {
     $data              = new stdClass;
     $data->name        = $this->_name;
     $data->title       = Text::_($this->pluginData->strings->TITLE);
-    $data->description = Text::_($this->pluginData->strings->OVERVIEW_DESC);
+    $data->description = Text::_($this->pluginData->strings->OVERVIEW_TITLE);
     $data->icon        = 'chess-king';
     $data->steps       = $this->steps;
 
