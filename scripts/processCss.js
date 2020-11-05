@@ -32,7 +32,7 @@ module.exports.css = (input) => {
 
         const outputFile = r
           .replace(".css", ".min.css")
-          .replace("tmpl_sloth/media_src", `${dest}`);
+          .replace("tmpl_sloth/media_src", `${dest}/media`);
 
         execSync(`npx postcss ${r} -o ${outputFile}`);
 

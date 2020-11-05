@@ -25,6 +25,6 @@ const { execSync } = require("child_process");
     await mkdir("tmpl_sloth");
   }
   execSync(
-    "cd tmpl_sloth && npx degit --force https://github.com/dgrammatiko/sloth#step-5"
+    "cd tmpl_sloth && npx degit --force https://github.com/dgrammatiko/sloth#step-6-inherritable"
   );
 })();

@@ -40,7 +40,7 @@ module.exports.js = (input) => {
         }
         const outputFile = path
           .replace(".js", ".min.js")
-          .replace(`tmpl_sloth/media_src`, `${dest}`);
+          .replace(`tmpl_sloth/media_src`, `${dest}/media`);
 
         execSync(
           `npx rollup --config rollup.config.js ${path} -o ${outputFile}`
