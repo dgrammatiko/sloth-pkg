@@ -2,11 +2,6 @@ const {
   existsSync,
   copy,
   mkdirSync,
-  readFileSync,
-  readlinkSync,
-  symlinkSync,
-  lstatSync,
-  writeFileSync,
 } = require("fs-extra");
 const { js } = require("./processJs.js");
 const { css } = require("./processCss.js");

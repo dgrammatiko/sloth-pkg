@@ -33,6 +33,6 @@ const { version } = require("../package.json");
   zip.addLocalFolder("sloth_tmp", false);
   zip.writeZip(`packages/tmpl_sloth.zip`);
 
-  // await remove("sloth_tmp");
+  await remove("sloth_tmp");
   await remove("tmpl_sloth");
 })();
