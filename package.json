@@ -43,7 +43,7 @@
     "readdirp": "3.4.0",
     "recursive-readdir": "2.2.2",
     "rollup": "2.19.0",
-    "rollup-plugin-terser": "6.1.0",
+    "rollup-plugin-terser": "7.0.2",
     "stylelint": "13.6.1",
     "stylelint-config-recommended": "3.0.0"
   },
