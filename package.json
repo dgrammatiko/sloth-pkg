@@ -38,7 +38,7 @@
     "postcss-import": "13.0.0",
     "postcss-inline-svg": "5.0.0",
     "postcss-mixins": "7.0.1",
-    "postcss-nested": "4.2.3",
+    "postcss-nested": "5.0.1",
     "postcss-simple-vars": "5.0.2",
     "readdirp": "3.5.0",
     "recursive-readdir": "2.2.2",
