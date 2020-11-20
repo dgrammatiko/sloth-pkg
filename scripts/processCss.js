@@ -9,8 +9,7 @@ const {
   writeFileSync,
 } = require("fs-extra");
 const { resolve } = require("path");
-const { yellow, magenta } = require("chalk");
-const { async: crawl } = require("fdir");
+const { fdir } = require("fdir");
 const crypto = require("crypto");
 
 const { gzipFile } = require("./compress.js");
@@ -23,7 +22,8 @@ const assets = require(`${root}/${dest}/joomla.asset.json`);
 module.exports.css = (input) => {
   // input is Directory
   if (lstatSync(resolve(process.cwd(), input)).isDirectory()) {
-    crawl(resolve(process.cwd(), input)).then((results) => {
+    const getFiles = new fdir().withFullPaths().crawl(resolve(process.cwd(), input));
+    getFiles.withPromise().then((results) => {
       results.forEach((r) => {
         const x = r.split("/");
         if (!r.endsWith("css") || x[x.length - 1].startsWith("_")) {
