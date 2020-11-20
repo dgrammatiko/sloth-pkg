@@ -39,7 +39,7 @@
     "postcss-inline-svg": "5.0.0",
     "postcss-mixins": "7.0.1",
     "postcss-nested": "5.0.1",
-    "postcss-simple-vars": "5.0.2",
+    "postcss-simple-vars": "6.0.1",
     "readdirp": "3.5.0",
     "recursive-readdir": "2.2.2",
     "rollup": "2.33.3",
