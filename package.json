@@ -19,7 +19,7 @@
   "devDependencies": {
     "@rollup/plugin-babel": "5.2.1",
     "@rollup/plugin-replace": "2.3.4",
-    "adm-zip": "0.4.16",
+    "adm-zip": "0.5.0",
     "autoprefixer": "9.8.6",
     "chalk": "4.1.0",
     "commander": "5.1.0",
