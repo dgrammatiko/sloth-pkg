@@ -29,7 +29,7 @@
     "fs-extra": "9.0.1",
     "git-clone": "0.1.0",
     "postcss": "8.2.1",
-    "postcss-cli": "8.3.0",
+    "postcss-cli": "8.3.1",
     "postcss-combine-media-query": "1.0.1",
     "postcss-custom-media": "7.0.8",
     "postcss-custom-selectors": "5.1.2",
