@@ -33,7 +33,10 @@ jobs:
     - name: GH Pages deploy
       uses: Cecilapp/GitHub-Pages-deploy@3.1.0
       env:
-        EMAIL: d.grammatiko@gmail.com
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_DIR: docs
-        JEKYLL_SITE: NO
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        email: d.grammatiko@gmail.com
+        build_dir: docs  # optional
+#         branch: website   # optional
+#         cname: domain.tld # optional
+        jekyll: no        # optional
