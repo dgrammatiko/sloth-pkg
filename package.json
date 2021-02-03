@@ -40,7 +40,7 @@
     "postcss-mixins": "7.0.2",
     "postcss-nested": "5.0.3",
     "postcss-preset-env": "6.7.0",
-    "postcss-simple-vars": "6.0.2",
+    "postcss-simple-vars": "6.0.3",
     "readdirp": "3.5.0",
     "recursive-readdir": "2.2.2",
     "rollup": "2.38.4",
