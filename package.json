@@ -43,7 +43,7 @@
     "postcss-simple-vars": "6.0.3",
     "readdirp": "3.5.0",
     "recursive-readdir": "2.2.2",
-    "rollup": "2.38.4",
+    "rollup": "2.38.5",
     "rollup-plugin-terser": "7.0.2",
     "stylelint": "13.9.0",
     "stylelint-config-recommended": "3.0.0"
