@@ -16,7 +16,7 @@ use Joomla\CMS\Version;
 /**
  * Installation class to perform additional changes during install/uninstall/update
  */
-class pkg_slothInstallerScript extends PackageAdapter {
+class Pkg_SlothInstallerScript extends \Joomla\CMS\Installer\InstallerScript {
   /**
    * A list of extensions (modules, plugins) to enable after installation. Each item has four values, in this order:
    * type (plugin, module, ...), name (of the extension), client (0=site, 1=admin), group (for plugins).
@@ -51,17 +51,6 @@ class pkg_slothInstallerScript extends PackageAdapter {
     // Enable the extensions we need to install
     $this->enableExtensions();
 
-    return true;
-  }
-
-  /**
-   * Runs on uninstallation
-   *
-   * @param   PackageAdapter  $parent  Parent object
-   *
-   * @return  boolean
-   */
-  public function uninstall(PackageAdapter $parent) {
     return true;
   }
 
@@ -123,6 +112,8 @@ class pkg_slothInstallerScript extends PackageAdapter {
 
     try {
       $db->execute();
-    } catch (\Exception $e) {}
+    } catch (\Exception $e) {
+      // var_dump($e);
+    }
   }
 }
