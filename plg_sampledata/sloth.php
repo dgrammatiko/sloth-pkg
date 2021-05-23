@@ -268,7 +268,7 @@ class PlgSampledataSloth extends \Joomla\CMS\Plugin\CMSPlugin {
             preg_match('/\{\{(.*?)\}\}/', $queryArr['id'], $output_arr);
 
             if ($output_arr && strpos($output_arr[1], 'com_categories_Category:') !== false) {
-              $newLinkId = (int) str_replace('com_categories_Category:', '', $output_arr[1]);
+              $newLinkId = (int)str_replace('com_categories_Category:', '', $output_arr[1]);
               $item->link = preg_replace('/\{\{.*?\}\}/', $sessionData['sampledata_com_categories_Category'][$newLinkId], $item->link);
             }
           }
@@ -278,7 +278,10 @@ class PlgSampledataSloth extends \Joomla\CMS\Plugin\CMSPlugin {
       if ($step->component === 'com_modules') {
         if (!empty($item->params)) {
           $params = json_decode($item->params);
-          $params->catid = [$sessionData['sampledata_com_categories_Category'][$params->catid[0]]];
+          if (isset($params->catid)) {
+            $params->catid = [$sessionData['sampledata_com_categories_Category'][$params->catid[0]]];
+          }
+
           $item->params = json_encode($params);
         }
       }
@@ -286,7 +289,7 @@ class PlgSampledataSloth extends \Joomla\CMS\Plugin\CMSPlugin {
       $idNext = $this->createItem($this->access, $item, $this->user->id, $componentModel, $idNext, $id, $sessionData);
     }
 
-    if (count($idNext)) {
+    if (isset($idNext) && count($idNext)) {
       $this->app->setUserState('sampledata_' . $currentComponent . '_' . $step->model, $idNext);
     }
 
@@ -319,7 +322,7 @@ class PlgSampledataSloth extends \Joomla\CMS\Plugin\CMSPlugin {
   private function copyFiles() {
     $zip = new \ZipArchive;
     if (is_file(__DIR__ . '/zips/images.zip')) {
-      if ($zip->open(__DIR__ . '/zips/images.zip') === TRUE) {
+      if ($zip->open(__DIR__ . '/zips/images.zip') === true) {
         $zip->extractTo(JPATH_ROOT . '/images');
         $zip->close();
       } else {
@@ -327,15 +330,15 @@ class PlgSampledataSloth extends \Joomla\CMS\Plugin\CMSPlugin {
       }
     }
     if (is_file(__DIR__ . '/zips/cached-resp-images.zip')) {
-      if ($zip->open(__DIR__ . '/zips/cached-resp-images.zip') === TRUE) {
+      if ($zip->open(__DIR__ . '/zips/cached-resp-images.zip') === true) {
         $zip->extractTo(JPATH_ROOT . '/media');
         $zip->close();
       } else {
-        $msg[] = $msg[] = 'cached-resp-images.zip';
+        $msg[] = 'cached-resp-images.zip';
       }
     }
 
-    if (count($msg)) {
+    if (isset($msg) && count($msg) > 0) {
       self::message(false, Text::_('JERROR'), 0, implode(', ', $msg));
     }
     return self::message(true,  Text::_($this->pluginData->strings->FILES_COPIED, 1, 'x'));
