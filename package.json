@@ -20,7 +20,7 @@
     "@rollup/plugin-babel": "5.3.0",
     "@rollup/plugin-replace": "2.4.2",
     "adm-zip": "0.5.5",
-    "autoprefixer": "10.2.5",
+    "autoprefixer": "10.2.6",
     "chalk": "4.1.1",
     "commander": "7.2.0",
     "cssnano": "5.0.4",
