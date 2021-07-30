@@ -21,7 +21,7 @@
     "@rollup/plugin-replace": "3.0.0",
     "adm-zip": "0.5.5",
     "autoprefixer": "10.3.1",
-    "chalk": "4.1.1",
+    "chalk": "4.1.2",
     "commander": "8.1.0",
     "cssnano": "5.0.7",
     "eslint": "7.31.0",
