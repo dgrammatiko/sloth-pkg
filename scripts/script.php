@@ -96,7 +96,7 @@ class Pkg_SlothInstallerScript extends \Joomla\CMS\Installer\InstallerScript {
       case 'template':
         // Languages, modules and templates have a client but not a folder
         $client = CMSAppHelper::getClientInfo($client, true);
-        $query->where('client_id = ' . (int) $client->id);
+        $query->where('client_id = 0'); // . (int) $client->id);
         break;
 
       default:

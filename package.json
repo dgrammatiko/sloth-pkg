@@ -1,6 +1,6 @@
 {
   "name": "sloth-pkg",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -39,7 +39,6 @@
     "postcss-inline-svg": "5.0.0",
     "postcss-mixins": "8.1.0",
     "postcss-nested": "5.0.6",
-    "postcss-preset-env": "6.7.0",
     "postcss-simple-vars": "6.0.3",
     "readdirp": "3.6.0",
     "recursive-readdir": "2.2.2",
