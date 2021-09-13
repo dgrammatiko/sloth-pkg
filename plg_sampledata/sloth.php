@@ -229,7 +229,7 @@ class PlgSampledataSloth extends \Joomla\CMS\Plugin\CMSPlugin {
     }
 
     $sessionData = [];
-    for ($i = 0, $l = $num; $i < $l; $i++) {
+    for ($i = 1, $l = $num; $i <= $l; $i++) {
       $compTmp = $this->stepsData->{$i}->component;
       $modelTmp = $this->stepsData->{$i}->model;
       $name = 'sampledata_' . $compTmp . '_' . $modelTmp;
@@ -255,7 +255,7 @@ class PlgSampledataSloth extends \Joomla\CMS\Plugin\CMSPlugin {
         }
 
         // Set the correct cat id/component id
-        if ($item->link) {
+        if (isset($item->link)) {
           $queryString = parse_url($item->link, PHP_URL_QUERY);
           parse_str($queryString, $queryArr);
           preg_match('/option\=(.*?)&/', $item->link, $matches);
@@ -264,7 +264,7 @@ class PlgSampledataSloth extends \Joomla\CMS\Plugin\CMSPlugin {
             $item->component_id = ComponentHelper::getComponent($matches[1])->id;
           }
 
-          if ($queryArr['id']) {
+          if (isset($queryArr['id'])) {
             preg_match('/\{\{(.*?)\}\}/', $queryArr['id'], $output_arr);
 
             if ($output_arr && strpos($output_arr[1], 'com_categories_Category:') !== false) {
