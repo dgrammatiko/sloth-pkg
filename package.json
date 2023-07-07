@@ -44,7 +44,7 @@
     "recursive-readdir": "2.2.2",
     "rollup": "2.56.3",
     "rollup-plugin-terser": "7.0.2",
-    "stylelint": "13.13.1",
+    "stylelint": "15.10.1",
     "stylelint-config-recommended": "5.0.0"
   },
   "dependencies": {
