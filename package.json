@@ -35,7 +35,7 @@
     "postcss-custom-selectors": "6.0.3",
     "postcss-discard-comments": "5.0.1",
     "postcss-easy-import": "3.0.0",
-    "postcss-import": "14.0.2",
+    "postcss-import": "14.1.0",
     "postcss-inline-svg": "5.0.0",
     "postcss-mixins": "8.1.0",
     "postcss-nested": "5.0.6",
