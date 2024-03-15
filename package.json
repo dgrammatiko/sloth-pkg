@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/dgrammatiko/sloth-pkg#readme",
   "devDependencies": {
-    "@rollup/plugin-babel": "5.3.1",
+    "@rollup/plugin-babel": "6.0.4",
     "@rollup/plugin-replace": "3.1.0",
     "adm-zip": "0.5.12",
     "autoprefixer": "10.4.18",
